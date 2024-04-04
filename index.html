@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="build/css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap" rel="stylesheet">
+
+    <title>App Salon de Belleza</title>
+</head>
+<body>
+    <div class="contenedor-estetica">
+        <div class="imagen"></div>
+        <div class="app">
+            <header class="header">
+                <h1></h1>
+            </header>
+            <nav class="tabs">
+                <button data-paso="1" type="button" class="tab">Servicios</button>
+                <button data-paso="2" type="button" class="tab">Información Cliente</button>
+                <button data-paso="3" type="button" class="tab">Resumen</button>
+            </nav>
+
+            <!-- Iniciando contenido de app -->
+            <div class="seccion" id="paso-1">
+                <h2> Servicios</h2>
+                <p class="text-center">Elije tus servicios a continuación</p>
+                <div class="listado-servicios"></div>
+            </div>
+
+            <div class="seccion" id="paso-2">
+                <h2>Tus Datos y Cita</h2>
+                <p class="text-center">Coloca tus datos y fecha de tu cita</p>
+                <form class="informacion-cliente">
+                    <div class="campo"><label on for="nombre">Nombre</label> <input type="text" placeholder="Tu Nombre" id="nombre" ></div>
+                    <div class="campo"><label for="fecha">Fecha</label> <input id="fecha" type="date"></div>
+                    <div class="campo"><label for="hora">Hora</label> <input id="hora" type="time"></div>
+                </form>
+            </div>
+
+            <div class="seccion" id="paso-3">
+                <h2>Resumen</h2>
+                <div class="resumen">
+                    
+                </div>
+            </div>
+
+            <div class="paginacion">
+                <button id="anterior">&laquo; Anterior</button>
+
+                <button id="siguiente">Siguiente &raquo;</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="build/js/bundle.js"></script>
+</body>
+</html>

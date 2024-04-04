@@ -1,0 +1,40 @@
+html{
+
+}
+
+body{
+    background-color: $negro;
+}
+
+.contenedor-estetica{
+    @include tablet{
+        height: 100vh; //Este "vh" hace que tome el 100% de la ventna disponible, dependienndo de la pantalla, es el tamaño (en pixeles) que toma, pero toma todo el ancho y alto e la pantalla, es mejor utilizar este a poner un 100%
+        @include grid(2, $separacion/2);
+    }
+        
+    .imagen{
+        height: 30rem;
+        background-image: url(../../build/img-webp/1.webp);
+        background-size: cover;
+        background-position: center center;
+        @include tablet{
+            height: auto;
+        }
+    }
+
+}
+
+.app{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: $separacion/2;
+
+    .seccion{
+        display:none;
+        margin-top: $separacion/2;
+    }
+}
+
+.mostrar-seccion{
+    display: block !important;
+}
